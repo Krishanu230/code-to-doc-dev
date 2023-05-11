@@ -4,7 +4,7 @@ echo "Knowl script running to generate ai docs..."
 BIN_PATH="$HOME"
 WORKING_DIR="$BIN_PATH/knowl_temp"
 KNOWL_CODE2DOC_NAME="code2doc.zip"
-CODE2DOC_DOWNLOAD_URL='https://releases.knowl.io/code2doc_debug.zip'
+CODE2DOC_DOWNLOAD_URL='https://releases.knowl.io/code2doc.zip'
 
 
 get_abs_filename() {
