@@ -10,3 +10,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  volumes:
+        - my_docker_volume:/volume_mount
+  args:
+    - aaaaaaaaaaaaaaaaaaaaa
