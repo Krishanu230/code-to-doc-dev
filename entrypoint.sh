@@ -1,6 +1,10 @@
 #!/bin/sh
-ls
-pwd
+echo "COMMIT_SHA=${{ github.sha }}" >> ${GITHUB_ENV}
+echo "REPO_NAME=${{ github.event.repository.name }}" >> ${GITHUB_ENV}
+echo "OWNER_NAME=${{ github.repository_owner }}" >> ${GITHUB_ENV}
+echo "KNOWL_BACKEND_HTTP=https://staging-api.knowl.io/" >> ${GITHUB_ENV}
+echo "BRANCH_NAME=${{ github.ref_name }}" >> ${GITHUB_ENV}
+echo "${{ github.action_path }}" >> "$GITHUB_PATH"
 echo "---"
 ls /
 echo "---"
