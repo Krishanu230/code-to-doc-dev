@@ -19,4 +19,5 @@ printf '%d args:' "$#"
 printf " '%s'" "$@"
 printf '\n'
 env
-/usr/app/start_doc_gen.sh /github/workspace
+cd /usr/app
+./start_doc_gen.sh $GITHUB_WORKSPACE
