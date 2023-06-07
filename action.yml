@@ -1,4 +1,4 @@
-name: Generate AI docs
+name: Generate-AI-docs
 description: Generate AI doc
 inputs:
   OPENAI_API_KEY:
