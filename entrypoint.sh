@@ -1,10 +1,15 @@
-#!/bin/sh
-echo "COMMIT_SHA=${{ github.sha }}" >> ${GITHUB_ENV}
-echo "REPO_NAME=${{ github.event.repository.name }}" >> ${GITHUB_ENV}
-echo "OWNER_NAME=${{ github.repository_owner }}" >> ${GITHUB_ENV}
-echo "KNOWL_BACKEND_HTTP=https://staging-api.knowl.io/" >> ${GITHUB_ENV}
-echo "BRANCH_NAME=${{ github.ref_name }}" >> ${GITHUB_ENV}
-echo "${{ github.action_path }}" >> "$GITHUB_PATH"
+#!/bin/bash
+
+repo=$GITHUB_REPOSITORY
+IFS="/" read -ra components <<< "$repo"
+owner=${components[0]}
+repository=${components[1]}
+
+export COMMIT_SHA="$GITHUB_SHA"
+export REPO_NAME="$repository"
+export OWNER_NAME="$owner"
+export KNOWL_BACKEND_HTTP=https://api.knowl.io/"
+export BRANCH_NAME="$GITHUB_REF_NAME"
 echo "---"
 ls /
 echo "---"
