@@ -130,6 +130,8 @@ download_from_link $KNOWL_UTILS_DOWNLOAD_URL ./ ./$KNOWL_UTILS_NAME
 
 echo ""
 echo "----bucketing files----"
+ls
+pwd
 ./bucket_files.sh $directory_path $RESULT_DIR/buckets
 exit_code_script1=$?
 
