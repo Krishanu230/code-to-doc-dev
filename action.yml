@@ -20,7 +20,9 @@ runs:
         echo "${{ github.action_path }}" >> "$GITHUB_PATH"
       shell: bash
     - name: Prepare script file
-      run: chmod +x "${{ github.action_path }}/run-gen-docs.sh"
+      run: |
+          chmod +x "${{ github.action_path }}/run-gen-docs.sh"
+          chmod +x "${{ github.action_path }}/bucket_files.sh"
       shell: bash
     - name: Run the script file
       run: run-gen-docs.sh ${{ github.workspace }}
