@@ -11,7 +11,7 @@ export OWNER_NAME="$owner"
 export KNOWL_BACKEND_HTTP="https://api.knowl.io/"
 export BRANCH_NAME="$GITHUB_REF_NAME"
 export GIT_PLATFORM="github"
-ls /
+export PROJECT_NAME="$repository"
 
 cd /usr/app
 ./start_doc_gen.sh $GITHUB_WORKSPACE
