@@ -8,7 +8,8 @@ inputs:
     description: KNOWL_API_KEY
     required: true
 runs:
-  using: composite
+  runs-on: ubuntu-latest
+  container: public.ecr.aws/t7d0n7r6/knowl-code-to-doc-manual:latest
   steps:
     - name: Setup Environment (Push)  
       run: |  
@@ -26,6 +27,9 @@ runs:
       shell: bash
     - name: ls
       run: ls
+      shell: bash
+    - name: pwd
+      run: pwd
       shell: bash
     - name: Run the script file
       run: run-gen-docs.sh ${{ github.workspace }}
