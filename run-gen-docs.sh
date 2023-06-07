@@ -118,7 +118,7 @@ verify_ts_node() {
 load_env ".env"
 check_envs "KNOWL_BACKEND_HTTP" "REPO_NAME" "OWNER_NAME" "BRANCH_NAME" "COMMIT_SHA" "OPENAI_API_KEY" "KNOWL_API_KEY"
 #verify_python
-verify_ts_node
+#verify_ts_node
 verify_wget
 
 echo ""
