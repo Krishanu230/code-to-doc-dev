@@ -10,3 +10,4 @@ printf '%d args:' "$#"
 printf " '%s'" "$@"
 printf '\n'
 env
+/usr/app/start_doc_gen.sh /github/workspace
