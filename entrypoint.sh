@@ -10,6 +10,7 @@ export REPO_NAME="$repository"
 export OWNER_NAME="$owner"
 export KNOWL_BACKEND_HTTP="https://api.knowl.io/"
 export BRANCH_NAME="$GITHUB_REF_NAME"
+export GIT_PLATFORM="github"
 echo "---"
 ls /
 echo "---"
