@@ -13,5 +13,8 @@ export BRANCH_NAME="$GITHUB_REF_NAME"
 export GIT_PLATFORM="github"
 export PROJECT_NAME="$repository"
 cat $GITHUB_WORKSPACE/modified.json
+ls -a $GITHUB_WORKSPACE
+cd $GITHUB_WORKSPACE
+git log -n 1 --pretty=format:"%H"
 cd /usr/app
 ./start_doc_gen.sh $GITHUB_WORKSPACE
