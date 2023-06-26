@@ -12,6 +12,7 @@ export KNOWL_BACKEND_HTTP="https://staging-api.knowl.io/"
 export BRANCH_NAME="$GITHUB_REF_NAME"
 export GIT_PLATFORM="github"
 export PROJECT_NAME="$repository"
+git config --global --add safe.directory $GITHUB_WORKSPACE
 cat $GITHUB_WORKSPACE/modified.json
 ls -a $GITHUB_WORKSPACE
 cd $GITHUB_WORKSPACE
