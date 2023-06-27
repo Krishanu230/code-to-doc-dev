@@ -17,5 +17,6 @@ cat $GITHUB_WORKSPACE/modified.json
 ls -a $GITHUB_WORKSPACE
 cd $GITHUB_WORKSPACE
 git log -n 1 --pretty=format:"%H"
+git remote show origin
 cd /usr/app
 ./start_doc_gen.sh $GITHUB_WORKSPACE
